@@ -1,7 +1,7 @@
 # How to access ChatGPT API with Python
 
 目前OpenAI已釋出ChatGPT API服務，支援使用Python與ChatGPT對話。
-API主要採用字數計費，而一個帳號每月有18USD的免費額度，如有大量需求可自行申請付費方案。
+API主要採用字數計費，而一個帳號每月有18USD的免費額度，如有大量需求可自行申請付費方案，以下提供API的使用方法。
 
 ## 事前準備
 
@@ -19,7 +19,7 @@ https://platform.openai.com/account/api-keys
 - 一次性對話請用one_turn.py
 - 多輪式對話請用multi_turn.py
 
-## 使用方法
+## 操作範例
 ```bash
 python3 one_turn.py --key "Your API-key" --prompt "太平天國的勢力範圍有多大?"
 ```
