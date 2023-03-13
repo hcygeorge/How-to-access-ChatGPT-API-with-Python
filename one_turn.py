@@ -39,7 +39,7 @@ def timing_decorator(func):
         result = func(*args, **kwargs)
         end_time = time.time()
         execution_time = end_time - start_time
-        print(f"{func.__name__} 函數執行時間：{execution_time:.2f} 秒")
+        print(f"\n反應時間：{execution_time:.2f} 秒")
         return result
     return wrapper
 
@@ -54,7 +54,7 @@ def call_chatgpt(messages, temperature=1):
 
 def print_answer(response):
     """列印ChatGPT回答"""
-    print('\nChatGPT:')
+    print('ChatGPT:')
     for sen in get_content(response):
         if sen == '':
             continue
@@ -66,5 +66,5 @@ if __name__ == '__main__':
         ]
 
     response = call_chatgpt(propmt)
-    billing(response)
     print_answer(response)
+    billing(response)
