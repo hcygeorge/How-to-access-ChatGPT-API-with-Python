@@ -3,7 +3,7 @@ import time
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("input_string", help="請輸入想問的問題")
+parser.add_argument("-p", "--prompt", help="請輸入想問的問題")
 parser.add_argument("-k", "--key", help="請輸入API key")
 
 
