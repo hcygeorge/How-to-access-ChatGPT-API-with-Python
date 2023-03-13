@@ -21,5 +21,5 @@ https://platform.openai.com/account/api-keys
 
 ## 使用方法
 ```bash
-python3 one_turn.py --key "API key" --prompt "太平天國的勢力範圍有多大?"
+python3 one_turn.py --key "Your API-key" --prompt "太平天國的勢力範圍有多大?"
 ```

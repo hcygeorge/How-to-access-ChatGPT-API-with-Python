@@ -8,7 +8,7 @@ parser.add_argument("-k", "--key", help="請輸入API key")
 
 
 args = parser.parse_args()
-print("You:", args.input_string)
+print("You:", args.prompt)
 
 # 填寫你的API key
 openai.api_key = args.key
@@ -62,8 +62,7 @@ def print_answer(response):
 
 if __name__ == '__main__':
     propmt = [
-        {"role": "user", "content": "請問澳洲有多少人?"},
-        {"role": "user", "content": "請分別用繁體中文和英文回答"},
+        {"role": "user", "content": args.prompt},
         ]
 
     response = call_chatgpt(propmt)
