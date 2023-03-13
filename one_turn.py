@@ -1,5 +1,12 @@
 import openai
 import time
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("input_string", help="請輸入想問的問題")
+
+args = parser.parse_args()
+print("You:", args.input_string)
 
 # 填寫你的API key
 openai.api_key = "attach your api key here"
@@ -52,7 +59,6 @@ def print_answer(response):
         print(sen)
 
 if __name__ == '__main__':
-    # 提示(給ChatGPT的命令)
     propmt = [
         {"role": "user", "content": "請問澳洲有多少人?"},
         {"role": "user", "content": "請分別用繁體中文和英文回答"},
