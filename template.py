@@ -1,14 +1,8 @@
-# 請先安裝OpenAI library
-# pip install openai
-# 請先到OpenAI網站取得api-key
-#  https://platform.openai.com/account/api-keys
-import os
 import openai
-import pandas as pd
 import time
 
 # 填寫你的API key
-openai.api_key = "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"
+openai.api_key = "attach your api key here"
 
 # 定義函數
 def get_content(response, sep='\n'):
@@ -16,9 +10,9 @@ def get_content(response, sep='\n'):
     return dict(dict(dict(response)['choices'][0])['message'])['content'].split(sep)
 
 def billing(response, price=0.002, tokens=1000, rate=30):
-    """計算一次ChatGPT API對話成本(字數)
+    """計算一次ChatGPT API對話成本(按字數計費)
     
-    對話成本 = ((問題+回答字數) * price) * 匯率 / tokens
+    對話成本 = ((問題+回答字數) * price) * rate / tokens
     """
     usage = dict(dict(response)['usage'])
     cost = (usage['total_tokens'] * price) / tokens
