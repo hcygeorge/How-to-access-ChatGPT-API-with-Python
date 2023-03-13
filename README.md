@@ -20,6 +20,6 @@ https://platform.openai.com/account/api-keys
 - 多輪式對話請用multi_turn.py
 
 ## 使用方法
-```python
-python3 one_turn.py "太平天國的勢力範圍有多大?"
+```bash
+python3 one_turn.py --key "API key" "太平天國的勢力範圍有多大?"
 ```

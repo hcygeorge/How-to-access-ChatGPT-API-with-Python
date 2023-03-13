@@ -4,12 +4,14 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument("input_string", help="請輸入想問的問題")
+parser.add_argument("-k", "--key", help="請輸入API key")
+
 
 args = parser.parse_args()
 print("You:", args.input_string)
 
 # 填寫你的API key
-openai.api_key = "attach your api key here"
+openai.api_key = args.key
 
 # 定義函數
 def get_content(response, sep='\n'):
